@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-video-upload",
+  "version": "0.0.1",
+  "description": "Video file upload from phone",
+  "cordova": {
+    "id": "cordova-plugin-video-upload",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "RK Star",
+  "license": "ISC"
+}

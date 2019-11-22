@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-video-upload" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>VideoUpload</name>
+    <js-module name="VideoUpload" src="www/VideoUpload.js">
+        <clobbers target="cordova.plugins.VideoUpload" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="VideoUpload">
+                <param name="ios-package" value="VideoUpload"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/VideoUpload.h" />
+        <source-file src="src/ios/VideoUpload.m" />
+        <framework src="src/ios/libs/FSPicker.framework" custom="true" embed="true"/>
+        <framework src="src/ios/libs/Filestack.framework" custom="true" embed="true"/>
+        <framework src="src/ios/libs/AFNetworking.framework" custom="true" embed="true"/>
+        <framework src="Foundation.framework" autogen="true"/>
+        <framework src="AssetsLibrary.framework" autogen="true"/>
+        <framework src="CoreFoundation.framework" autogen="true"/>
+        <framework src="CoreGraphics.framework" autogen="true"/>
+        <framework src="MobileCoreServices.framework" autogen="true"/>
+        <framework src="QuartzCore.framework" autogen="true"/>
+        <framework src="SystemConfiguration.framework" autogen="true"/>
+    </platform>
+</plugin>
