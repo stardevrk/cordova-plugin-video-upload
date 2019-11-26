@@ -69,6 +69,17 @@ FSConfig *config;
             config.storeOptions = storeOptions;
         }
         FSTheme *theme = [FSTheme filestackTheme];
+        theme.activityIndicatorColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        theme.headerFooterViewTintColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        theme.collectionViewBackgroundColor = [UIColor colorWithRed:0.32 green:0.32 blue:0.35 alpha:1.0];
+        theme.navigationBarTintColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        theme.navigationBarStyle = UIBarStyleDefault;
+        theme.activityIndicatorColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        theme.progressCircleProgressColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        theme.tableViewBackgroundColor = [UIColor colorWithRed:0.32 green:0.32 blue:0.35 alpha:1.0];
+        theme.tableViewCellBackgroundColor =  [UIColor colorWithRed:0.32 green:0.32 blue:0.35 alpha:1.0];
+        theme.tableViewCellIconTintColor = [UIColor colorWithRed:0.32 green:0.32 blue:0.35 alpha:1.0];
+        theme.tableViewCellSelectedBackgroundColor = [UIColor colorWithRed:0.32 green:0.32 blue:0.35 alpha:0.7];
         dispatch_async(dispatch_get_main_queue(), ^{
           FSPickerController *fsPickerController = [[FSPickerController alloc] initWithConfig:config theme:theme];
           fsPickerController.fsDelegate = self;
@@ -156,42 +167,7 @@ FSConfig *config;
          else if ([[array objectAtIndex:i] isEqual: @"CAMERA"]) {
              [sources addObject:FSSourceCamera];
          }
-         else if ([[array objectAtIndex:i] isEqual: @"FACEBOOK"]) {
-             [sources addObject:FSSourceFacebook];
-         }
-         else if ([[array objectAtIndex:i] isEqual: @"CLOUDDRIVE"]) {
-             [sources addObject:FSSourceCloudDrive];
-         }
-         else if ([[array objectAtIndex:i] isEqual: @"DROPBOX"]) {
-             [sources addObject:FSSourceDropbox];
-         }
-         else if ([[array objectAtIndex:i] isEqual: @"BOX"]) {
-             [sources addObject:FSSourceBox];
-         }
-         else if ([[array objectAtIndex:i] isEqual: @"GMAIL"]) {
-             [sources addObject:FSSourceGmail];
-         }
-         else if ([[array objectAtIndex:i] isEqual: @"INSTAGRAM"]) {
-             [sources addObject:FSSourceInstagram];
-         }
-         else if ([[array objectAtIndex:i] isEqual: @"FLICKR"]) {
-             [sources addObject:FSSourceFlickr];
-         }
-         else if ([[array objectAtIndex:i] isEqual: @"PICASA"]) {
-             [sources addObject:FSSourcePicasa];
-         }
-         else if ([[array objectAtIndex:i] isEqual: @"GITHUB"]) {
-             [sources addObject:FSSourceGithub];
-         }
-         else if ([[array objectAtIndex:i] isEqual: @"GOOGLE_DRIVE"]) {
-             [sources addObject:FSSourceGoogleDrive];
-         }
-         else if ([[array objectAtIndex:i] isEqual: @"EVERNOTE"]) {
-             [sources addObject:FSSourceEvernote];
-         }
-         else if ([[array objectAtIndex:i] isEqual: @"SKYDRIVE"]) {
-             [sources addObject:FSSourceSkydrive];
-         }
+         
      }
      return sources;
 }
