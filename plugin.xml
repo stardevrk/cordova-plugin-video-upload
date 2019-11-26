@@ -2,7 +2,7 @@
 <plugin id="cordova-plugin-video-upload" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>VideoUpload</name>
     <js-module name="VideoUpload" src="www/VideoUpload.js">
-        <clobbers target="cordova.plugins.VideoUpload" />
+        <clobbers target="window.VideoUpload" />
     </js-module>
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
